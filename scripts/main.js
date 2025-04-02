@@ -71,25 +71,53 @@ const departments = {
     }
 }
 
-console.log(departments);
+// console.log(departments);
+//
+// console.log(`De afdeling Sales heeft ${departments.sales.numberOfEmployees} medewerkers`)
+// console.log(`Marketing is een leuke afdeling om te werken. ${departments.marketing.description}.`)
+// console.log(`De afdeling Customer Service heeft ${departments["customer-service"].numberOfEmployees} medewerkers`)
+// console.log(`Sales is een uitdagende afdeling om te werken als Verkoopmanager. ${departments.sales.description} Verkoopmanager`)
 
-console.log(`De afdeling Sales heeft ${departments.sales.numberOfEmployees} medewerkers`)
-console.log(`Marketing is een leuke afdeling om te werken. ${departments.marketing.description}.`)
-console.log(`De afdeling Customer Service heeft ${departments["customer-service"].numberOfEmployees} medewerkers`)
-console.log(`Sales is een uitdagende afdeling om te werken als Verkoopmanager. ${departments.sales.description} Verkoopmanager`)
+// ----2----
 const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: 1: marketing   2: sales  3: customer-service');
 console.log(userInput);
 
 switch (userInput) {
     case "1":
-        console.log("test")
+        console.log(`Je koos voor Marketing. ${departments.marketing.description}`)
         break
     case "2":
-        console.log("test2")
+        console.log(`Je koos voor Sales. ${departments.sales.description}`)
         break
     case "3":
-        console.log("test3")
+        console.log(`Je koos voor Customer Service. ${departments['customer-service'].description}`)
         break
     default:
-        console.log("je hebt teveel water gedronken vandaag")
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
 }
+
+// -----3-----
+
+// const jobsMarketing = prompt(`Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n0: ${departments.marketing.jobs[0].title} \n1: ${departments.marketing.jobs[1].title} \n2: ${departments.marketing.jobs[2].title} \n3: ${departments.marketing.jobs[3].title}`)
+//
+// switch (jobsMarketing) {
+//     case "0":
+//         console.log(`Je koos voor ${departments.marketing.jobs[0].title}. Een uitdagende rol! ${departments.marketing.jobs[0].description}`)
+//         break
+//     case "1":
+//         console.log(`Je koos voor ${departments.marketing.jobs[1].title}. Een uitdagende rol! ${departments.marketing.jobs[1].description}`)
+//         break
+//     case "2":
+//         console.log(`Je koos voor ${departments.marketing.jobs[2].title}. Een uitdagende rol! ${departments.marketing.jobs[2].description}`)
+//         break
+//     case "3":
+//         console.log(`Je koos voor ${departments.marketing.jobs[3].title}. Een uitdagende rol! ${departments.marketing.jobs[3].description}`)
+//         break
+//     default:
+//         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+// ----4----
+
+const Marketing = prompt ()
+console.log(`Marketing is een leuke afdeling om te werken. Er werken op dit moment ${departments.marketing['numberOfEmployees']} medewerkers.`)
