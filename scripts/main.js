@@ -1,3 +1,7 @@
+
+// NOTE: Niemand begint te tellen bij nul dus alle opties beginnen bij 1, zoals echte mensen dat doen.
+// NOTE2: Pupitar is en blijft de beste pokemon, change my mind.
+
 const departments = {
     marketing: {
         description: "Marketing omvat verschillende strategieën en activiteiten gericht op het promoten van producten, diensten of merken bij het doelpubliek. Het omvat het begrijpen van de behoeften en voorkeuren van consumenten, het uitvoeren van marktonderzoek, het ontwikkelen van marketingplannen en het implementeren van tactieken om potentiële klanten te bereiken en te betrekken. Marketingprofessionals analyseren markttrends, identificeren doelmarkten en creëren overtuigende boodschappen en communicatiestrategieën om merkbekendheid op te bouwen, klantenwerving te stimuleren en klantloyaliteit te bevorderen",
@@ -71,4 +75,224 @@ const departments = {
     }
 }
 
-console.log(departments);
+
+// ----2----
+// const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: 1: marketing   2: sales  3: customer-service');
+// console.log(userInput);
+//
+// switch (userInput) {
+//     case "1":
+//         console.log(`Je koos voor Marketing. ${departments.marketing.description}`)
+//         break
+//     case "2":
+//         console.log(`Je koos voor Sales. ${departments.sales.description}`)
+//         break
+//     case "3":
+//         console.log(`Je koos voor Customer Service. ${departments['customer-service'].description}`)
+//         break
+//     default:
+//         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+
+// -----3-----
+
+// const jobsMarketing = prompt(`Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n0: ${departments.marketing.jobs[0].title} \n1: ${departments.marketing.jobs[1].title} \n2: ${departments.marketing.jobs[2].title} \n3: ${departments.marketing.jobs[3].title}`)
+//
+// switch (jobsMarketing) {
+//     case "0":
+//         console.log(`Je koos voor ${departments.marketing.jobs[0].title}. Een uitdagende rol! ${departments.marketing.jobs[0].description}`)
+//         break
+//     case "1":
+//         console.log(`Je koos voor ${departments.marketing.jobs[1].title}. Een uitdagende rol! ${departments.marketing.jobs[1].description}`)
+//         break
+//     case "2":
+//         console.log(`Je koos voor ${departments.marketing.jobs[2].title}. Een uitdagende rol! ${departments.marketing.jobs[2].description}`)
+//         break
+//     case "3":
+//         console.log(`Je koos voor ${departments.marketing.jobs[3].title}. Een uitdagende rol! ${departments.marketing.jobs[3].description}`)
+//         break
+//     default:
+//         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+// ----4----
+
+//
+// const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: 1: marketing   2: sales  3: customer-service');
+// console.log(userInput);
+//
+// switch (userInput) {
+//     case "1":
+//         console.log(`Je koos voor ${Object.keys(departments)[0]}. ${departments.marketing.description}`)
+//         const jobsMarketing = prompt(`Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n0: ${departments.marketing.jobs[0].title} \n1: ${departments.marketing.jobs[1].title} \n2: ${departments.marketing.jobs[2].title} \n3: ${departments.marketing.jobs[3].title}`)
+//         switch (jobsMarketing) {
+//             case "0":
+//                 console.log(`Je koos voor ${departments.marketing.jobs[0].title}. Een uitdagende rol! ${departments.marketing.jobs[0].description}`)
+//                 break
+//             case "1":
+//                 console.log(`Je koos voor ${departments.marketing.jobs[1].title}. Een uitdagende rol! ${departments.marketing.jobs[1].description}`)
+//                 break
+//             case "2":
+//                 console.log(`Je koos voor ${departments.marketing.jobs[2].title}. Een uitdagende rol! ${departments.marketing.jobs[2].description}`)
+//                 break
+//             case "3":
+//                 console.log(`Je koos voor ${departments.marketing.jobs[3].title}. Een uitdagende rol! ${departments.marketing.jobs[3].description}`)
+//                 break
+//             default:
+//                 console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+//         }
+//         break
+//     case "2":
+//         console.log(`Je koos voor Sales. ${departments.sales.description}`)
+//         const jobsSales = prompt(`Je koos ${Object.keys(departments)[1]}. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n0: ${departments.sales.jobs[0].title} \n1: ${departments.sales.jobs[1].title} \n2: ${departments.sales.jobs[2].title} \n3: ${departments.sales.jobs[3].title}`)
+//         switch (jobsSales) {
+//             case "0":
+//                 console.log(`Je koos voor ${departments.sales.jobs[0].title}. Een uitdagende rol! ${departments.sales.jobs[0].description}`)
+//                 break
+//             case "1":
+//                 console.log(`Je koos voor ${departments.sales.jobs[1].title}. Een uitdagende rol! ${departments.sales.jobs[1].description}`)
+//                 break
+//             case "2":
+//                 console.log(`Je koos voor ${departments.sales.jobs[2].title}. Een uitdagende rol! ${departments.sales.jobs[2].description}`)
+//                 break
+//             case "3":
+//                 console.log(`Je koos voor ${departments.sales.jobs[3].title}. Een uitdagende rol! ${departments.sales.jobs[3].description}`)
+//                 break
+//             default:
+//                 console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+//         }
+//         break
+//     case "3":
+//         console.log(`Je koos voor ${Object.keys(departments)[2]}. ${departments['customer-service'].description}`)
+//         const jobsCustomerService = prompt(`Je koos ${Object.keys(departments)[2]}. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n0: ${departments['customer-service'].jobs[0].title} \n1: ${departments['customer-service'].jobs[1].title} \n2: ${departments['customer-service'].jobs[2].title} \n3: ${departments['customer-service'].jobs[3].title}`)
+//         switch (jobsCustomerService) {
+//             case "0":
+//                 console.log(`Je koos voor ${departments['customer-service'].jobs[0].title}. Een uitdagende rol! ${departments['customer-service'].jobs[0].description}`)
+//                 break
+//             case "1":
+//                 console.log(`Je koos voor ${departments['customer-service'].jobs[1].title}. Een uitdagende rol! ${departments['customer-service'].jobs[1].description}`)
+//                 break
+//             case "2":
+//                 console.log(`Je koos voor ${departments['customer-service'].jobs[2].title}. Een uitdagende rol! ${departments['customer-service'].jobs[2].description}`)
+//                 break
+//             case "3":
+//                 console.log(`Je koos voor ${departments['customer-service'].jobs[3].title}. Een uitdagende rol! ${departments['customer-service'].jobs[3].description}`)
+//                 break
+//             default:
+//                 console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+//         }
+//         break
+//     default:
+//         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+
+// ----5----
+
+// document.getElementById('role-title').textContent = 'Kas!';
+// document.getElementById('role-description').textContent = 'Sushi!';
+
+
+
+const userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: 1: marketing   2: sales  3: customer-service');
+console.log(userInput);
+
+switch (userInput) {
+    case "1":
+        console.log(`Je koos voor ${Object.keys(departments)[0]}. ${departments.marketing.description}`)
+        document.getElementById('department-description').textContent = `${departments.marketing.description}`
+        const jobsMarketing = prompt(`Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 1 en 4 in. \n1: ${departments.marketing.jobs[0].title} \n2: ${departments.marketing.jobs[1].title} \n3: ${departments.marketing.jobs[2].title} \n4: ${departments.marketing.jobs[3].title}`)
+        switch (jobsMarketing) {
+            case "1":
+                console.log(`Je koos voor ${departments.marketing.jobs[0].title}. Een uitdagende rol! ${departments.marketing.jobs[0].description}`)
+                document.getElementById('role-title').textContent = `${departments.marketing.jobs[0].title}`
+                document.getElementById('role-description').textContent = `${departments.marketing.jobs[0].description}`
+                break
+            case "2":
+                console.log(`Je koos voor ${departments.marketing.jobs[1].title}. Een uitdagende rol! ${departments.marketing.jobs[1].description}`)
+                document.getElementById('role-title').textContent = `${departments.marketing.jobs[1].title}`
+                document.getElementById('role-description').textContent = `${departments.marketing.jobs[1].description}`
+                break
+            case "3":
+                console.log(`Je koos voor ${departments.marketing.jobs[2].title}. Een uitdagende rol! ${departments.marketing.jobs[2].description}`)
+                document.getElementById('role-title').textContent = `${departments.marketing.jobs[2].title}`
+                document.getElementById('role-description').textContent = `${departments.marketing.jobs[2].description}`
+                break
+            case "4":
+                console.log(`Je koos voor ${departments.marketing.jobs[3].title}. Een uitdagende rol! ${departments.marketing.jobs[3].description}`)
+                document.getElementById('role-title').textContent = `${departments.marketing.jobs[3].title}`
+                document.getElementById('role-description').textContent = `${departments.marketing.jobs[3].description}`
+                break
+            default:
+                console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+                document.getElementById('error-message').textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen."
+        }
+        break
+    case "2":
+        console.log(`Je koos voor Sales. ${departments.sales.description}`)
+        document.getElementById('department-description').textContent = `${departments.sales.description}`
+        const jobsSales = prompt(`Je koos ${Object.keys(departments)[1]}. Over welke functie wil je meer weten? Voer een getal tussen 1 en 4 in. \n1: ${departments.sales.jobs[0].title} \n2: ${departments.sales.jobs[1].title} \n3: ${departments.sales.jobs[2].title} \n4: ${departments.sales.jobs[3].title}`)
+        switch (jobsSales) {
+            case "1":
+                console.log(`Je koos voor ${departments.sales.jobs[0].title}. Een uitdagende rol! ${departments.sales.jobs[0].description}`)
+                document.getElementById('role-title').textContent = `${departments.sales.jobs[0].title}`
+                document.getElementById('role-description').textContent = `${departments.sales.jobs[0].description}`
+                break
+            case "2":
+                console.log(`Je koos voor ${departments.sales.jobs[1].title}. Een uitdagende rol! ${departments.sales.jobs[1].description}`)
+                document.getElementById('role-title').textContent = `${departments.sales.jobs[1].title}`
+                document.getElementById('role-description').textContent = `${departments.sales.jobs[1].description}`
+                break
+            case "3":
+                console.log(`Je koos voor ${departments.sales.jobs[2].title}. Een uitdagende rol! ${departments.sales.jobs[2].description}`)
+                document.getElementById('role-title').textContent = `${departments.sales.jobs[2].title}`
+                document.getElementById('role-description').textContent = `${departments.sales.jobs[2].description}`
+                break
+            case "4":
+                console.log(`Je koos voor ${departments.sales.jobs[3].title}. Een uitdagende rol! ${departments.sales.jobs[3].description}`)
+                document.getElementById('role-title').textContent = `${departments.sales.jobs[3].title}`
+                document.getElementById('role-description').textContent = `${departments.sales.jobs[3].description}`
+                break
+            default:
+                console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+                document.getElementById('error-message').textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen."
+        }
+        break
+    case "3":
+        console.log(`Je koos voor ${Object.keys(departments)[2]}. ${departments['customer-service'].description}`)
+        document.getElementById('department-description').textContent = `${departments['customer-service'].description}`
+        const jobsCustomerService = prompt(`Je koos ${Object.keys(departments)[2]}. Over welke functie wil je meer weten? Voer een getal tussen 1 en 4 in. \n1: ${departments['customer-service'].jobs[0].title} \n2: ${departments['customer-service'].jobs[1].title} \n3: ${departments['customer-service'].jobs[2].title} \n4: ${departments['customer-service'].jobs[3].title}`)
+        switch (jobsCustomerService) {
+            case "1":
+                console.log(`Je koos voor ${departments['customer-service'].jobs[0].title}. Een uitdagende rol! ${departments['customer-service'].jobs[0].description}`)
+                document.getElementById('role-title').textContent = `${departments['customer-service'].jobs[0].title}`
+                document.getElementById('role-description').textContent = `${departments['customer-service'].jobs[0].description}`
+                break
+            case "2":
+                console.log(`Je koos voor ${departments['customer-service'].jobs[1].title}. Een uitdagende rol! ${departments['customer-service'].jobs[1].description}`)
+                document.getElementById('role-title').textContent = `${departments['customer-service'].jobs[1].title}`
+                document.getElementById('role-description').textContent = `${departments['customer-service'].jobs[1].description}`
+                break
+            case "3":
+                console.log(`Je koos voor ${departments['customer-service'].jobs[2].title}. Een uitdagende rol! ${departments['customer-service'].jobs[2].description}`)
+                document.getElementById('role-title').textContent = `${departments['customer-service'].jobs[2].title}`
+                document.getElementById('role-description').textContent = `${departments['customer-service'].jobs[2].description}`
+                break
+            case "4":
+                console.log(`Je koos voor ${departments['customer-service'].jobs[3].title}. Een uitdagende rol! ${departments['customer-service'].jobs[3].description}`)
+                document.getElementById('role-title').textContent = `${departments['customer-service'].jobs[3].title}`
+                document.getElementById('role-description').textContent = `${departments['customer-service'].jobs[3].description}`
+                break
+            default:
+                console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+                document.getElementById('error-message').textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen."
+        }
+        break
+    default:
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+        document.getElementById('error-message').textContent = "Ongeldige keuze. Probeer het opnieuw door de pagina te verversen."
+
+}
+
+
